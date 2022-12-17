@@ -1,0 +1,47 @@
+@import url(colours.css);
+
+.bloglist {
+    list-style: none;
+    width: 60vw;
+}
+
+
+
+.card {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: var(--accent-dark);
+    height: 120px;
+    box-shadow: 0 0 0 0 none;
+    font-family: 'Teko';
+}
+
+.card-text {
+    padding: 20px;
+    align-self: flex-start;
+}
+
+.card-text h2 {
+    font-size: 2rem;
+    color: var(--text-light)
+}
+
+.card-text p {
+    color: var(--text-dark);
+}
+
+.card-image {
+    align-self: flex-end;
+    height: 100%;
+    width: 200px;
+    border-radius: 20px 0 0 20px;
+    margin-right: 20px;
+}
+
+.card:hover {
+    /* background-color: var(--accent-light); */
+    box-shadow: 0 0 20px 2px var(--accent-light);
+    transition: background-color 0.75s ease-in;
+}

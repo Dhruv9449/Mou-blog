@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Blog from './screens/Blog';
+import Home from './screens/Home';
+import Preloader from './screens/Preloader';
+import PageNotFound from './screens/PageNotFound';
+import Post from './screens/Post';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app theme" id="app">
+      <Preloader />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/blog/:slug" element={<Blog />} />
+
+          <Route path="/newpost" element={localStorage.getItem("role") ? localStorage.getItem("role") === "admin" ? <Post edit={false} /> : <PageNotFound error="Page not found" status={404} /> : <PageNotFound error="Page not found" status={404} />} />
+          <Route path="*" element={<PageNotFound error="Page not found" status={404} />} />
+
+          <Route path="/editpost/:slug" element={localStorage.getItem("role") ? localStorage.getItem("role") === "admin" ? <Post edit={true} /> : <PageNotFound error="Page not found" status={404} /> : <PageNotFound error="Page not found" status={404} />} />
+          <Route path="*" element={<PageNotFound error="Page not found" status={404} />} />
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

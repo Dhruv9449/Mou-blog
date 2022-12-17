@@ -1,0 +1,33 @@
+@import url(colours.css);
+
+.page-not-found {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-not-found h1 {
+    font-size: 5rem;
+    color: var(--text-dark);
+}
+
+
+.page-not-found a {
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px 1px var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2px;
+}
+
+.page-not-found a:hover {
+    background-color: var(--accent-light);
+    color: var(--background);
+}

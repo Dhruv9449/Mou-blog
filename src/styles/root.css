@@ -1,0 +1,43 @@
+@import url(colours.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--background);
+}
+
+.page {
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.page::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    z-index: 10;
+}
+
+.page::-webkit-scrollbar-track {
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.page::-webkit-scrollbar-thumb {
+    background: var(--accent-light);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.page::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
+    z-index: 10;
+}

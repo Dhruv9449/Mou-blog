@@ -1,0 +1,32 @@
+.footer {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-family: 'Teko';
+    font-size: 1.1rem;
+}
+
+.footer .socials {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.footer a {
+    color: var(--accent-light);
+}
+
+.footer a:hover {
+    color: var(--text-light);
+}
+
+.footer .socials a {
+    color: var(--text-light);
+}
+
+.footer .socials a:hover {
+    color: var(--accent-light-hover);
+}
